@@ -4,8 +4,8 @@ services:
     container_name: elasticsearch
     environment:
       - discovery.type=single-node
-      - xpack.security.enabled=false
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - xpack.security.enabled=false # Turns off authentication/TLS encryption
+      - ES_JAVA_OPTS=-Xms512m -Xmx512m # JVM memory settings - 512 megabytes
     volumes:
       - elasticsearch_data:/usr/share/elasticsearch/data
     ports:

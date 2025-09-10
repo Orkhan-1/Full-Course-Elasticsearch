@@ -8,14 +8,14 @@ import co.elastic.clients.json.jackson.JacksonJsonpMapper;
 
 public class ESInsertExample {
     public static void main(String[] args) throws Exception {
-        RestClient restClient = RestClient.builder(new HttpHost("localhost", 9200)).build();
+        RestClient restClient = RestClient.builder(new HttpHost("localhost", 9200))
+                .build();
         ElasticsearchClient client = new ElasticsearchClient(
                 new RestClientTransport(restClient, new JacksonJsonpMapper()));
 
         IndexResponse response = client.index(i -> i
                 .index("products")
-                .id("2")
-                .document(new Product("TV", 2000))
+                .document(new Product("Monitor_1", 1200))
                 .refresh(Refresh.True)
         );
 
