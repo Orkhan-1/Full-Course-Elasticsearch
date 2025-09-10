@@ -5,8 +5,8 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.example</groupId>
-    <artifactId>elasticsearch-example</artifactId>
+    <groupId>com.orkhangasanov</groupId>
+    <artifactId>full-course-elasticsearch</artifactId>
     <version>1.0.0</version>
 
     <properties>
